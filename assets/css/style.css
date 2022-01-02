@@ -1,19 +1,21 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-    background-color: #fce138;
    color: #39a6b2;
     font-family: Helvetica, Arial, san-serif;
 }
 
-/*apply styles to <header*/
+
+/* HEADER/ NAV BAR STYLES START */
+
 header {
     padding: 20px 35px;
     background-color: #39a6b2;
+    display: flex;
     justify-content: space-between; 
     flex-wrap: wrap;
 }
@@ -23,7 +25,6 @@ header h1 {
   font-size: 36px;
   color: #fce138;
   margin: 0.3px 0;
-  display: inline;
 }
 
 header a {
@@ -31,13 +32,10 @@ header a {
   color: #fce138;
 }
 
-/*apply style to navigation*/
 header nav{
-  float: right;
   margin: 7px 0;
 }
 
-/*header display*/
 header nav ul  {
     display: flex;
     flex-wrap: wrap;
@@ -46,14 +44,17 @@ header nav ul  {
     list-style: none;
 }
 
-/*size of nav*/
 header nav ul li a {
   margin: 0 30px;
   font-weight: lighter;
   font-size: 1.55vw;
 }
 
-/*styling the footer*/
+/* header/navbar styles end */
+
+
+
+/* FOOT STYLES START*/
 footer {
   background: #fce138;
   width: 100%;
@@ -69,7 +70,6 @@ footer h2 {
   margin: 0;
 }
 
-/*styling right footer*/
 footer div {
   line-height: 1.5;
   text-align: right;
@@ -78,7 +78,9 @@ footer div {
 footer a {
   color: #024e76;
 }
+/* END FOOTER STYLES */
 
+/* STYLE ALL SECTION TAGS */
 section {
   padding: 60px;
 }
@@ -86,10 +88,8 @@ section {
 /* Hero Style Start */
   .hero {
     background-image: url("file:///Users/ciarahargis/Desktop/projects/run-buddy/assets/images/hero-bg.jpeg");
-    height: 600px;
     background-size: cover;
     background-position: center;
-    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -109,9 +109,7 @@ section {
     font-size: 55px;
     color: #fce138;
   }
-  /*Hero Style End */
-
-  /* Hero Form*/
+  
   .hero-form {
     border: solid 3px #024e76;
     background-color: #fce138;
@@ -119,16 +117,13 @@ section {
     width: 40%;
     margin: 3.5%;
     color:  #024e76;
-    position: absolute;
-    bottom: 120px;
-    right: 140px;
- }
- .hero-form h3 {
-  font-size: 24px,
-  margin 0;
  }
 
- .hero-form p {
+ .hero-form h3 {
+  font-size: 24px;
+  margin: 0;
+ }
+.hero-form p {
   margin: 5px 0 15px 0;
  }
 
@@ -141,22 +136,22 @@ section {
   width: 100%;
   margin-bottom: 15px;
  } 
+
  .hero-form label {
    margin: 0 5px;
   }
 
-  /* Button Styling */
-  button {
+.hero-form button {
     color: #fce138;
     background-color: #024e76;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
   }
-  /* Button and Hero Styling End */
+  /* HERO STYLE END */
   
-  /* Intro-Originally and Steps*/
-  
+ 
+ /* SECTION TITLE STYLES START */ 
   .section-title {
     font-size: 55px;
     color: #024e76;
@@ -174,13 +169,27 @@ section {
   .secondary-border {
     border-color: #39a6b2;
   }
-  
-  /* Style Step */
-  steps {
+  /* SECTION TITLE STYLES END */
+
+  /* WHAT WE DO STYLES */
+
+  .intro p {
+    line-height: 1.7;
+    color: #39a6b2;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+  }
+  /* WHAT WE DO STYLES END */
+
+
+  /* WHAT YOU DO STYLES START */
+  .steps {
     background-color: #fce138
   }
+  
   step {
-    background-color: #fce138;
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
@@ -191,6 +200,19 @@ section {
     justify-content: space-between;
   }
 
+  .step h3 {
+    color: #024e76;
+    font-size: 46px;
+    flex: 1 30%;
+  }
+  
+  .step-info {
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
   .step-img {
  flex: 1 12%;
  margin-right: 20px;
@@ -200,21 +222,11 @@ section {
     max-width: 100%;
   }
 
-  .step h3 {
-    color: #024e76;
-    font-size: 46px;
-    margin-top: 10px;
-    flex: 1 30%;
-  }
-
-  .step-info {
-    display: wrap;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+.step-text {
+  flex: 12;
+}
 
   .step-text p {
-    flex: 12;
     color: #39a6b2;
     font-size: 18px;
   }
@@ -225,8 +237,9 @@ section {
     color: #024e76;
   }
 
+  /* WHAT YOU DO STYLES END */
 
-  /* Trainers */
+ /* Trainers */
  .trainers {
    width: 100%;
    margin: 0 auto;
@@ -248,25 +261,11 @@ section {
   
   .trainer-bio {
     padding: 25px;
-  }
-  
-  .text-left {
-    text-align: left;
-  }
-  
-  .text-right {
-    text-align: right;
-  }
-
-  .flex-row {
-    display: flex;
-  }
-
-
-
-  .trainer-bio h3 {
-    font-size: 28px;
     line-height: 1.3;
+  }
+
+.trainer-bio h3 {
+  font-size: 28px;
   }
   
   .trainer-bio h4 {
@@ -278,10 +277,11 @@ section {
   .trainer-bio p {
     font-size: 17px;
   }
+ /* TRAINER STYLES END */
 
   /* Reach Out */
   .contact {
-   background-color: #024e76;
+   background: #024e76;
  } 
 
   .contact h2 {
@@ -293,13 +293,13 @@ section {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .contact-info > * {
   flex:1;
   margin: 15px;
 }
 
-
-  .contact-info iframe {
+.contact-info iframe {
    height: 400px;
  }
 
@@ -307,8 +307,7 @@ section {
    color: white;
  }
 
-
-  .contact-info h3 {
+.contact-info h3 {
    color: #fce138;
    font-size: 32px;
  }
@@ -318,10 +317,6 @@ section {
    line-height: 1.5;
    font-size: 16px;
    font-style: normal;
- }
-
-  .contact-info a {
-   color: #fce138;
  }
 
  .contact-form input, .contact-formtextarea {
@@ -344,4 +339,23 @@ section {
   padding: 15px 0;
   font-size: 16px;
 }
- /* REACH OUT STYLES END */
+
+.contact-info a {
+  color: #fce138;
+}
+
+
+/* REACH OUT STYLES END */
+
+/* UTILITIES */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex-row {
+  display: flex;
+}
